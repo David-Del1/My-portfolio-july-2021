@@ -1,14 +1,15 @@
 import styled from 'styled-components'
+import Sidebar from './Components/Sidebar';
 
 function App() {
   return (
-    <AppStyled>
-      <h1>Styled Components</h1>
-    </AppStyled>
+   
+      <Sidebar />
+
   );
 }
 
-const AppStyled = styled.div`
-background-color: lightblue;
-`
+// const AppStyled = styled.div`
+// background-color: lightblue;
+// `
 export default App;

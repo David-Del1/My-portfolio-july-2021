@@ -68,7 +68,7 @@ const NavStyled = styled.nav`
       display: block;
       a {
         display: block;
-        padding: .25rem 0;
+        padding: 1rem 0;
         position: relative;
         z-index: 10;
         

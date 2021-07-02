@@ -46,6 +46,15 @@ const GlobalStyle = createGlobalStyle`
     max-width: 100%;
   }
 
+  h1 {
+    font-size: 2.3rem;
+
+    span {
+      font-size: 2.3rem;
+      color: var(--primary-color);
+    }
+  }
+
   body {
     background-color: var(--background-dark-color);
     color: var(--font-light-color);

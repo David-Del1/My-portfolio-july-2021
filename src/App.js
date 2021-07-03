@@ -66,27 +66,27 @@ function App() {
         </div>
 
         <Switch>
-          <Route path="/home">
+          <Route exact path="/">
             <Home />
           </Route>
 
-          <Route path="/about">
+          <Route exact path="/about">
             <About />
           </Route>
 
-          <Route path="/resume">
+          <Route exact path="/resume">
             <Resume />
           </Route>
 
-          <Route path="/portfolio">
+          <Route exact path="/portfolio">
             <Portfolio />
           </Route>
 
-          <Route path="/blog">
+          <Route exact path="/blog">
             <Blog />
           </Route>
 
-          <Route path="/contact">
+          <Route exact path="/contact">
             <Contact />
           </Route>
         </Switch>
@@ -109,7 +109,7 @@ const MainContentStyled = styled.main`
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    opacity: 0.6;
+    opacity: 0.5;
     z-index: -1;
 
     .line-1, .line-2, .line-3, .line-4 {

@@ -19,15 +19,20 @@ const PrimaryButtonStyled = styled.a`
   text-transform: uppercase;
   position: relative;
   transition: all ease-in-out .2s;
-  &:hover::after {
+  &::after {
     content: '';
     position: absolute;
-    width: 100%;
+    width: 0;
     height: 10%;
-    background-color: var(--white-color);
+    transition: all ease-in-out .2s;
     left: 0;
     bottom: 0;
-    transition: all ease-in-out .2s;
+    opacity: 0.8;
+  }
+  &:hover::after {
+    width: 100%;
+    background-color: var(--white-color);
+    
   }
 `
 export default PrimaryButton;

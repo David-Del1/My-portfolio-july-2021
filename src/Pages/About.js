@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { MainLayout }from '../styles/Layout';
 import Title from '../Components/Title';
 import ImageSection from '../Components/ImageSection';
+import ServicesSection from '../Components/ServicesSection';
+import ReviewsSection from '../Components/ReviewsSection';
 
 function About() {
   return (
@@ -10,6 +12,8 @@ function About() {
       <AboutStyled>
         <Title title={'About me'} span={'About me'} />
         <ImageSection />
+        <ServicesSection />
+        <ReviewsSection />
       </AboutStyled>
     </MainLayout>
     

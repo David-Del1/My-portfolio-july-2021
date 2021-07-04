@@ -1,6 +1,6 @@
 import { Route, Switch } from 'react-router-dom';
 import About from './Pages/About';
-import Resume from './Pages/Resume';
+import ResumePage from './Pages/ResumePage';
 import Portfolio from './Pages/Portfolio';
 import Blog from './Pages/Blog';
 import Contact from './Pages/Contact';
@@ -75,7 +75,7 @@ function App() {
           </Route>
 
           <Route exact path="/resume">
-            <Resume />
+            <ResumePage />
           </Route>
 
           <Route exact path="/portfolio">

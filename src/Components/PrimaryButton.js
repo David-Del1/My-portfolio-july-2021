@@ -1,20 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
+import GetAppIcon from '@material-ui/icons/GetApp';
 
 function PrimaryButton({title}) {
   return (
     <PrimaryButtonStyled>
       {title}
+      <GetAppIcon />
     </PrimaryButtonStyled>
   );
 }
 
 const PrimaryButtonStyled = styled.a`
   background-color: var(--primary-color);
-  padding: 0.5rem 2rem;
+  padding: 0.5rem;
   color: white;
   cursor: pointer;
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
   font-size: inherit;
   text-transform: uppercase;
   position: relative;

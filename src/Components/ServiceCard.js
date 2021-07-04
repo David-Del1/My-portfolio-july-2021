@@ -28,6 +28,8 @@ transition: all ease-in-out 0.2s;
 }
 .container {
   padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
 }
   img {
     height: 120px;
@@ -40,7 +42,7 @@ transition: all ease-in-out 0.2s;
     position: relative;
     &::after {
       content: '';
-      width: 13rem;
+      width: 100%;
       background-color: var(--border-color);
       height: 4px;
       position: absolute;

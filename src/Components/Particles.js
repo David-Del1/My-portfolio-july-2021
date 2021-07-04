@@ -34,10 +34,10 @@ function Particle() {
       }
     },
     "opacity": {
-      "value": 0.6,
+      "value": 0.7,
       "random": true,
       "anim": {
-        "enable": true,
+        "enable": false,
         "speed": 1,
         "opacity_min": 0,
         "sync": false
@@ -63,7 +63,7 @@ function Particle() {
     "move": {
       "enable": true,
       "speed": 1,
-      "direction": "none",
+      "direction": "top",
       "random": true,
       "straight": false,
       "out_mode": "out",
@@ -79,11 +79,11 @@ function Particle() {
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": true,
+        "enable": false,
         "mode": "bubble"
       },
       "onclick": {
-        "enable": true,
+        "enable": false,
         "mode": "repulse"
       },
       "resize": true

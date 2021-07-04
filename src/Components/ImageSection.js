@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import mock from '../images/mock1.jpg'
 import PrimaryButton from './PrimaryButton';
 
+
 function ImageSection() {
   return (
     <ImageSectionStyled>
@@ -11,6 +12,7 @@ function ImageSection() {
       </div>
       <div className="right-content">
         <h4>Fullstack <span>Developer.</span></h4>
+        <h4>Problem <span>Solver.</span></h4>
        
         <p className="paragraph">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci suscipit reprehenderit nobis. Illum quo fugiat accusantium maxime rem unde tempora!
@@ -31,7 +33,7 @@ function ImageSection() {
             <p> Dev</p>
           </div>
         </div>
-        <PrimaryButton title={'Download'}/>
+        <PrimaryButton title={'Download Resume'}/>
       </div>
     </ImageSectionStyled>
   )
@@ -42,7 +44,7 @@ const ImageSectionStyled = styled.div`
   display: flex;
   .left-content{
     width: 100%;
-   
+  
     img {
       width: 90%;
       height: 100%;
@@ -78,6 +80,6 @@ const ImageSectionStyled = styled.div`
       }
     }
   }
-`
+`;
 
 export default ImageSection;

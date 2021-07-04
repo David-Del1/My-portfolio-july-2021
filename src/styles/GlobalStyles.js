@@ -55,6 +55,12 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  h6 {
+    color: var(--white-color);
+    font-size: 1.2rem;
+    padding-bottom: 0.6rem;
+  }
+
   body {
     background-color: var(--background-dark-color);
     color: var(--font-light-color);

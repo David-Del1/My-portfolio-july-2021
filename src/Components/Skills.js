@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {MainLayout, InnerLayout} from '../styles/Layout.js';
+import {InnerLayout} from '../styles/Layout.js';
 import Title from './Title';
 import Progress from './Progress';
 
@@ -56,6 +56,10 @@ const SkillsStyled = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 2rem;
     grid-column-gap: 3rem;
+
+    @media only screen and (max-width: 1000px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 `
 

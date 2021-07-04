@@ -1,52 +1,58 @@
 import React from 'react';
 import styled from 'styled-components';
-import {MainLayout, InnerLayout} from '../styles/Layout.js';
+import {MainLayout, InnerLayout} from '../styles/Layout';
 import Title from '../Components/Title';
-import ContactItem from '../Components/ContactItem.js';
-import PhoneIphoneOutlinedIcon from '@material-ui/icons/PhoneIphoneOutlined';
+import PrimaryButton from '../Components/PrimaryButton';
+import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
+import ContactItem from '../Components/ContactItem';
 
 function Contact() {
-  const phone = <PhoneIphoneOutlinedIcon />
-  const email = <EmailIcon />
-  return (
-    <MainLayout>
-      <Title title={'Contact'} span={'Contact'}/>
-      <ContactStyled>
-        <InnerLayout className={'contact-section'}>
-          <div className="left-content">
-            <form className="form">
-              <div className="form-field">
-                <label htmlFor="name">Enter Your Name <span>*</span></label>
-                <input id="name" type="text" required />
-              </div>
-              <div className="form-field">
-                <label htmlFor="email">Enter Your Email <span>*</span></label>
-                <input id="email" type="text" required />
-              </div>
-              <div className="form-field">
-                <label htmlFor="subject">Subject <span>*</span></label>
-                <input id="subject" type="text" required />
-              </div>
-              <div className="form-field">
-                <label htmlFor="text-area">Enter Your Message</label>
-                <textarea id="textarea" type="textarea" cols="30" rows="12" required />
-              </div>
-            </form>
-          </div>
-          <div className="right-content">
-            <ContactItem title={'Phone'} icon={phone} cont1={'+1(909)731-4075'} />
-            <ContactItem title={'Email'} icon={email} cont1={'DavidDel.731@gmail.com'} />
-          </div>
-          
-        </InnerLayout>
-      </ContactStyled>
-    </MainLayout>
-    
-  );
+    const phone = <PhoneIcon />
+    const email = <EmailIcon />
+    return (
+        <MainLayout>
+            <Title title={'Contact'} span={'Contact'} />
+            <ContactPageStyled >
+            <InnerLayout className={'contact-section'}>
+                <div className="left-content">
+                    <div className="contact-title">
+                        <h4>Get In Touch</h4>
+                    </div>
+                    <form  className="form">
+                        <div className="form-field">
+                            <label htmlFor="name"  ></label>
+                            <input type="text" id="name" placeholder="Your name*" required/>
+                        </div>
+                        <div className="form-field">
+                            <label htmlFor="email"  ></label>
+                            <input type="email" id="email" placeholder="Your Email*" required/>
+                        </div>
+                        <div className="form-field">
+                            <label htmlFor="subject"></label>
+                            <input type="text" id="subject" placeholder="Subject" required/>
+                        </div>
+                        <div className="form-field">
+                            <label htmlFor="text-area"></label>
+                            <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Enter your message here..."></textarea>
+                        </div>
+                        <div className="form-field f-button">
+                            <PrimaryButton title={'Send Email'} />
+                        </div>
+                    </form>
+                </div>
+                <div className="right-content">
+                    <ContactItem title={'Phone'} icon={phone} cont1={'+66-789675637'} cont2={'07663520283'} />
+                    <ContactItem title={'Email'} icon={email} cont1={'loremipsum@gmail.com'} cont2={'info.lorem.ipsum@gmail.com'} />
+                    
+                </div>
+            </InnerLayout>
+            </ContactPageStyled>
+        </MainLayout>
+    )
 }
 
-const ContactStyled = styled.section`
+const ContactPageStyled = styled.section`
     .contact-section{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -74,7 +80,7 @@ const ContactStyled = styled.section`
         .form{
             width: 100%;
             @media screen and (max-width: 502px){
-                width: 100%;
+                width: 90%;
             }
             .form-field{
                 margin-top: 2rem;
@@ -92,23 +98,19 @@ const ContactStyled = styled.section`
                 input{
                     border: 1px solid var(--border-color);
                     outline: none;
-                    background-color: var(--background-dark-color);
+                    background: transparent;
                     height: 50px;
                     padding:0 15px;
                     width: 100%;
                     color: inherit;
                 }
                 textarea{
-                  font-size: 1rem;
-                    background-color: var(--background-dark-color);
+                    background-color: transparent;
                     border: 1px solid var(--border-color);
                     outline: none;
                     color: inherit;
                     width: 100%;
                     padding: .8rem 1rem;
-                }
-                span {
-                  color: var(--primary-color);
                 }
             }
             

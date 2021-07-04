@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Nav from './Nav';
 
-function Sidebar() {
+function Sidebar({navToggle}) {
   return (
-    <SidebarStyled>
+    <SidebarStyled className={`${navToggle ? 'nav-toggle' : ''}`}>
       <Nav />
     </SidebarStyled>
   );
@@ -17,9 +17,13 @@ const SidebarStyled = styled.div`
   background-color: var(--sidebar-dark-color);
   overflow: hidden;
   transition: all 1s ease-in-out;
+  z-index: 101;
   @media only screen and (max-width: 1100px) {
     transform: translateX(-100%);
   }
+  @media only screen and (max-width: 600px) {
+      width: 100vw;
+    }
 `
 
 export default Sidebar

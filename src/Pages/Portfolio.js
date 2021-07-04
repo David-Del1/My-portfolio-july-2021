@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {MainLayout, InnerLayout} from '../styles/Layout';
-import styled from 'styled-components';
 import Title from '../Components/Title';
 import portfolios from '../data/portfolio.js';
 import Menu from '../Components/Menu';
@@ -10,7 +9,7 @@ const allButtons = ['All', ...new Set(portfolios.map(item => item.category))]
 
 function PortfoliosPage() {
     const [menuItem, setMenuItems] = useState(portfolios);
-    const [button, setButtons] = useState(allButtons);
+    const [button] = useState(allButtons);
 
     const filter = (button) => {
 
@@ -24,7 +23,7 @@ function PortfoliosPage() {
     }
     return (
         <MainLayout>
-            <Title title={'Portfolios'} span={'portfolios'} />
+            <Title title={'Portfolio'} span={'Portfolio'} />
             <InnerLayout>
 
                 <Button filter={filter} button={button} />

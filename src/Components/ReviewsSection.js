@@ -22,7 +22,13 @@ function ReviewsSection() {
 
 const ReviewsStyled = styled.section`
   .reviews {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    @media only screen and (max-width: 1000px) {
+      grid-row-gap: 3rem;
+      grid-template-columns: repeat(1, 1fr);
+    }
 }
 `;
 

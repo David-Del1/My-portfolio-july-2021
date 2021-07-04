@@ -16,7 +16,8 @@ import { IconButton } from "@material-ui/core";
 
 function App() {
   const [theme, setTheme] = useState('dark-theme');
-  const [checked, setChecked] = useState();
+  const [checked, setChecked] = useState(false);
+  const [navToggle, setNavToggle] = useState(false);
 
   useEffect(() => {
     document.documentElement.className= theme;
@@ -35,7 +36,7 @@ function App() {
   }
   return (
   <div className="App">
-      <Sidebar />
+      <Sidebar navToggle={navToggle}/>
       <div className="theme">
         <div className="light-dark-mode">
           <div className="left-content">
@@ -53,7 +54,7 @@ function App() {
       </div>
 
       <div className="hamburger-menu">
-        <IconButton>
+        <IconButton onClick={() => setNavToggle(!navToggle)}>
           <MenuIcon />
         </IconButton>
       </div>

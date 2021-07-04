@@ -38,6 +38,15 @@ const TitleStyled = styled.div`
       left: 0;
       opacity: 0.6;
     }
+
+    @media screen and (max-width: 800px) {
+        font-size: 3rem;
+      
+      }
+      @media screen and (max-width: 650px) {
+        font-size: 2.5rem;
+        
+      }
     span {
       font-size: 5rem;
       font-weight: 900;
@@ -47,6 +56,15 @@ const TitleStyled = styled.div`
       left: 0;
       top: 20%;
       z-index: -1;
+
+      @media screen and (max-width: 800px) {
+        font-size: 4rem;
+        
+      }
+      @media screen and (max-width: 650px) {
+        font-size: 3rem;
+        
+      }
     }
   }
 `

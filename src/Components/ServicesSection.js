@@ -28,9 +28,15 @@ function ServicesSection() {
 const ServicesStyled = styled.section`
 
   .services {
-    display: flex;
-    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
     margin-top: 4rem;
+
+    @media only screen and (max-width: 1000px) {
+    
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 `
 

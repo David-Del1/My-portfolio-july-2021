@@ -1,5 +1,5 @@
 import React from 'react';
-import { MainLayout, InnerLayout } from '../styles/Layout';
+import { InnerLayout } from '../styles/Layout';
 import styled from 'styled-components';
 import Title from './Title';
 import SmallTitle from './SmallTitle';

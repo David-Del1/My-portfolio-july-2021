@@ -38,6 +38,10 @@ const BlogsStyled = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
+
+    @media only screen and (max-width: 900px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
     
     .image {
       width: 100%;

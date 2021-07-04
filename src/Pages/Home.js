@@ -40,6 +40,8 @@ const HomeStyled = styled.header`
   height: 100vh;
   position: relative;
 
+  
+
   .particle-con {
     position: absolute;
     top: 0;
@@ -53,6 +55,12 @@ const HomeStyled = styled.header`
     transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
+
+    @media only screen and (max-width: 600px) {
+      p {
+        font-size: 1rem;
+      }
+    }
 
     .icons {
       display: flex;

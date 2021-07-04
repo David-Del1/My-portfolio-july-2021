@@ -16,7 +16,7 @@ function Particle() {
       }
     },
     "color": {
-      "value": "#ffffff"
+      "value": "#636e72"
     },
     "shape": {
       "type": "edge",
@@ -34,7 +34,7 @@ function Particle() {
       }
     },
     "opacity": {
-      "value": 0.7,
+      "value": 1,
       "random": true,
       "anim": {
         "enable": false,

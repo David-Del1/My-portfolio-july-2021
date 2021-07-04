@@ -15,6 +15,11 @@ const SidebarStyled = styled.div`
   position: fixed;
   height: 100vh;
   background-color: var(--sidebar-dark-color);
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+  @media only screen and (max-width: 1100px) {
+    transform: translateX(-100%);
+  }
 `
 
 export default Sidebar

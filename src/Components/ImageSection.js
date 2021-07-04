@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import mock from '../images/mock1.jpg'
+import mock from '../images/me.jpeg'
 import PrimaryButton from './PrimaryButton';
 
 

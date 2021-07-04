@@ -41,8 +41,8 @@ const TitleStyled = styled.div`
     span {
       font-size: 5rem;
       font-weight: 900;
-      color: lightblue;
-      opacity: 0.15;
+      color: var(--font-dark-color);
+      opacity: 0.4;
       position: absolute;
       left: 0;
       top: 20%;

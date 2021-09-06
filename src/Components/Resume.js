@@ -15,7 +15,7 @@ function Resume() {
       <Title title={'Resume'} span={'Resume'} />
       <InnerLayout>
         <div className="description">
-          <p> <span>Description:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, doloremque nostrum, labore dolorem unde consequuntur a quos ut neque temporibus blanditiis tempore debitis facilis, eligendi ex perferendis quod dolores cumque. Officia, nisi autem rem ipsam sequi voluptatibus ipsa, quaerat eligendi, placeat doloribus illum iste sapiente? Enim dolorem vitae cupiditate quam?</p>
+          <p> <span>Profile:</span> Software Engineer dedicated to creating practical, intuitive, and accessible solutions with software. A self-motivated and insatiably curious lifelong learner passionately optimistic about people's ability to solve problems.</p>
         </div>
         <div className="small-title">
           <SmallTitle icon={briefcase} title={'Work Experience'} />

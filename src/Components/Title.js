@@ -17,7 +17,7 @@ const TitleStyled = styled.div`
     font-weight: 600;
     position: relative;
     padding-bottom: 0.6rem;
-    &::before {
+    /* &::before {
       content: '';
       position: absolute;
       bottom: 0;
@@ -26,8 +26,8 @@ const TitleStyled = styled.div`
       height: .33rem;
       background-color: var(--background-light-color-2);
       border-radius: 5px;
-    }
-    &::after {
+    } */
+    /* &::after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -37,7 +37,7 @@ const TitleStyled = styled.div`
       border-radius: 5px;
       left: 0;
       opacity: 0.6;
-    }
+    } */
 
     @media screen and (max-width: 800px) {
         font-size: 3rem;
@@ -56,6 +56,7 @@ const TitleStyled = styled.div`
       left: 0;
       top: 20%;
       z-index: -1;
+      text-decoration: line-through var(--background-light-color-2) 5px;
 
       @media screen and (max-width: 800px) {
         font-size: 4rem;

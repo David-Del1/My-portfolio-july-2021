@@ -13,25 +13,8 @@ function ImageSection() {
       <div className="right-content">
         <h4>Fullstack <span>Developer.</span></h4>
         <h4>Problem <span>Solver.</span></h4>
-       
-        <p className="paragraph">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci suscipit reprehenderit nobis. Illum quo fugiat accusantium maxime rem unde tempora!
-        </p>
-        <div className="about-info">
-          <div className="info-title">
-            <p>Full Name:</p>
-            <p>Age:</p>
-            <p>Languages:</p>
-            <p>Location:</p>
-            <p>Services:</p>
-          </div>
-          <div className="info">
-            <p> David A. Delgadillo</p>
-            <p> 25</p>
-            <p> English, Spanish</p>
-            <p> CA, USA</p>
-            <p> Dev</p>
-          </div>
+        <div className="description">
+          <p> <span>Profile:</span> Software Engineer dedicated to creating practical, intuitive, and accessible solutions with software. A self-motivated and insatiably curious lifelong learner passionately optimistic about people's ability to solve problems.</p>
         </div>
         <PrimaryButton title={'Download Resume'}/>
       </div>
@@ -43,12 +26,6 @@ const ImageSectionStyled = styled.div`
   margin-top: 4rem;
   display: flex;
 
-  @media only screen and (max-width: 1000px) {
-    flex-direction: column;
-    .left-content {
-      margin-bottom: 2rem;
-    }
-  }
   .left-content{
     width: 100%;
   
@@ -65,7 +42,7 @@ const ImageSectionStyled = styled.div`
       color: var(--white-color);
       span{
         font-size: 2rem;
-      color: var(--primary-color);
+        color: var(--primary-color);
       }
     }
     .paragraph {
@@ -85,6 +62,22 @@ const ImageSectionStyled = styled.div`
           padding: 0.5rem 0;
         }
       }
+    }
+  }
+
+  .description {
+    margin: 1rem 0;
+
+    span {
+    color: var(--primary-color);
+    font-weight: 800;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column;
+    .left-content {
+      margin-bottom: 2rem;
     }
   }
 `;

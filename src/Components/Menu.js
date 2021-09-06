@@ -7,29 +7,29 @@ function Menu({menuItem}) {
   return (
         <MenuItemStyled >
             {
-                menuItem.map((item)=>{
-                    return <div className="grid-item" key={item.id}>
-                        <div className="portfolio-content">
-                            <div className="portfolio-image">
-                                <img src={item.image} alt=""/>
-                                <ul>
-                                    <li>
-                                        <a href={item.link1}>
-                                            <GitHub />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href={item.link2}>
-                                            <LaunchIcon />
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <h6>{item.title}</h6>
-                            <p>{item.text}</p>
+            menuItem.map((item)=>{
+                return <div className="grid-item" key={item.id}>
+                    <div className="portfolio-content">
+                        <div className="portfolio-image">
+                            <img src={item.image} alt=""/>
+                            <ul>
+                                <li>
+                                    <a href={item.link1}>
+                                        <GitHub />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href={item.link2}>
+                                        <LaunchIcon />
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+                        <h6>{item.title}</h6>
+                        <p>{item.text}</p>
                     </div>
-                })
+                </div>
+            })
             }
         </MenuItemStyled>
     )
@@ -38,7 +38,7 @@ function Menu({menuItem}) {
 const MenuItemStyled = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
+    grid-gap: 1rem;
     @media screen and (max-width:920px){
         grid-template-columns: repeat(2, 1fr);
     }
@@ -46,6 +46,10 @@ const MenuItemStyled = styled.div`
         grid-template-columns: repeat(1, 1fr);
     }
     .grid-item{
+        background-color: var(--background-dark-grey);
+        padding: 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
         .portfolio-content{
             display: block;
             position: relative;
@@ -111,7 +115,7 @@ const MenuItemStyled = styled.div`
                     opacity: 1;
                     li{
                         transition: all .4s ease-in-out;
-                      
+                    
                         &:hover{
                             background-color: var(--primary-color);
                         }

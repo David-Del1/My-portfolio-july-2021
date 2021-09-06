@@ -18,12 +18,13 @@ function Button({filter, button}) {
 const ButtonStyled = styled.button`
     outline: none;
     border: none;
+    border-radius: 4px;
     background-color: var(--background-light-color-2);
     padding: .4rem 2rem;
     font-size: inherit;
     color: var(--white-color);
     cursor: pointer;
-    transition: all .4s ease-in-out;
+    transition: all .2s ease-in-out;
     margin-bottom: .6rem;
     &:active ,&:focus{
         background-color: var(--primary-color);

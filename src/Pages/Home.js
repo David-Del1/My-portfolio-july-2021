@@ -20,15 +20,15 @@ function Home() {
           I'm a Full Stack software developer based in Orange County, CA.<br /> Welcome to my portfolio site.
         </p>
         <div className="icons">
-          <Link to="/" className="i-linkedIn icon">
+          <a href="https://www.linkedin.com/in/davidadelgadillo/" className="i-linkedIn icon" target="_blank" rel="noreferrer">
             <LinkedInIcon />
-          </Link>
-          <Link to="/" className="i-github icon">
+          </a>
+          <a href="https://github.com/David-Del1" target="_blank" className="i-github icon" rel="noreferrer">
             <GithubIcon />
-          </Link>
-          <Link to="/" className="i-twitter icon">
+          </a>
+          <a href="https://twitter.com/DavidDel_" target="_blank" className="i-twitter icon" rel="noreferrer">
             <TwitterIcon />
-          </Link>
+          </a>
         </div>
       </div>
     </HomeStyled>

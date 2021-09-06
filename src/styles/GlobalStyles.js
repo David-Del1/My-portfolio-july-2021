@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-family: 'Nunito Sans', sans-serif;
+
   }
 
   body::-webkit-scrollbar {
@@ -31,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     font-family: inherit;
     color: inherit;
-    font-size: inheri;
+    font-size: inherit;
   }
 
   li {
@@ -70,6 +71,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     background-color: var(--background-dark-color);
     color: var(--font-light-color);
+    transition: all ease-in-out 1s;
   }
 
   /* Light/Dark mode CSS */
@@ -85,12 +87,13 @@ const GlobalStyle = createGlobalStyle`
     display:flex;
     align-items: center;
     justify-content: center;
+
     svg {
       display: flex;
       align-items: center;
       font-size: 1.7rem;
       color: var(--white-color);
-     
+    
     }
     
   }

@@ -11,14 +11,14 @@ function ServicesSection() {
   return (
     <InnerLayout>
       <ServicesStyled>
-        <Title title = {"Skillsets"} span={"Skillsets"} />
+        <Title title = {"Highlights"} span={"Highlights"} />
         <div className="services">
-          <ServiceCard image={design} title={"Web Design"} 
-            paragraph={"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quod repellendus ducimus aut doloremque vel facere quidem est vero quis."}/>
-          <ServiceCard image={goals} title={"Web Design"} 
-            paragraph={"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quod repellendus ducimus aut doloremque vel facere quidem est vero quis."}/>
-          <ServiceCard image={undraw2} title={"Web Design"} 
-            paragraph={"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quod repellendus ducimus aut doloremque vel facere quidem est vero quis."}/>
+          <ServiceCard image={design} title={"TDD"} 
+            paragraph={"Employing an array of tools and libraries, product features are rigorously tested following industry-standard coding practices."}/>
+          <ServiceCard image={goals} title={"UX/UI"} 
+            paragraph={"With an eye for design and inclusivity, I aim to create applications that users from every kind of background and orientation find easy to use and beautiful to look at."}/>
+          <ServiceCard image={undraw2} title={"Adaptable"} 
+            paragraph={"No matter any unforseens, I remain a resourceful problem solver in team environments as well as working individually."}/>
         </div>
       </ServicesStyled>
     </InnerLayout>

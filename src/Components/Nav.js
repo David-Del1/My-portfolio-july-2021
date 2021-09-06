@@ -2,30 +2,35 @@ import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import avatar from '../images/me.jpeg';
+import { useNavToggle } from '../state/AppProvider';
+
 
 function Nav() {
+  const { navToggle, setNavToggle } = useNavToggle();
+
+  const handleClick = () => {
+    setNavToggle(!navToggle);
+  }
+
   return (
     <NavStyled>
       <div className="avatar">
         <img src={avatar} alt="me" />
       </div>
         <ul className="nav-items">
-          <li className="nav-item">
+          <li className="nav-item" onClick={handleClick}>
             <NavLink to="/" exact activeClassName="active-class">Home</NavLink>
           </li>
-          <li className="nav-item">
+          <li className="nav-item" onClick={handleClick}>
             <NavLink to="/about" exact activeClassName="active-class">About</NavLink>
           </li>
-          <li className="nav-item">
-            <NavLink to="/resume" exact activeClassName="active-class">Resume</NavLink>
-          </li>
-          <li className="nav-item">
+          <li className="nav-item" onClick={handleClick}>
             <NavLink to="/portfolio" exact activeClassName="active-class">Portfolio</NavLink>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item" onClick={handleClick}>
             <NavLink to="/blog" exact activeClassName="active-class">Blog</NavLink>
-          </li>
-          <li className="nav-item">
+          </li> */}
+          <li className="nav-item" onClick={handleClick}>
             <NavLink to="/contact" exact activeClassName="active-class">Contact</NavLink>
           </li>
         </ul>
@@ -72,7 +77,7 @@ const NavStyled = styled.nav`
       display: block;
       a {
         display: block;
-        padding: 1rem 0;
+        padding: 1.5rem 0;
         position: relative;
         z-index: 10;
         

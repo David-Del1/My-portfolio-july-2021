@@ -5,6 +5,7 @@ import Title from '../Components/Title';
 import ImageSection from '../Components/ImageSection';
 import ServicesSection from '../Components/ServicesSection';
 import ReviewsSection from '../Components/ReviewsSection';
+import Skills from '../Components/TechStack.js';
 
 function About() {
   return (
@@ -13,6 +14,7 @@ function About() {
         <Title title={'About me'} span={'About me'} />
         <ImageSection />
         <ServicesSection />
+        <Skills />
         <ReviewsSection />
       </AboutStyled>
     </MainLayout>

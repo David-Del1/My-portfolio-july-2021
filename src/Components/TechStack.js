@@ -1,4 +1,3 @@
-import { wrap } from 'module';
 import React from 'react';
 import styled from 'styled-components';
 import {InnerLayout} from '../styles/Layout.js';

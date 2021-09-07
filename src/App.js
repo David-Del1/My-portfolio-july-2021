@@ -18,7 +18,6 @@ import { useNavToggle } from './state/AppProvider';
 function App() {
   const [theme, setTheme] = useState('dark-theme');
   const [checked, setChecked] = useState(false);
-  const {navToggle, setNavToggle } = useNavToggle()
 
   useEffect(() => {
     document.documentElement.className= theme;
@@ -37,7 +36,7 @@ function App() {
   }
   return (
   <div className="App">
-      <Sidebar navToggle={navToggle}/>
+      {/* <Sidebar navToggle={navToggle}/> */}
       <div className="theme">
         <div className="light-dark-mode">
           <div className="left-content">
@@ -54,11 +53,11 @@ function App() {
       </div>
       </div>
 
-      <div className="hamburger-menu">
+      {/* <div className="hamburger-menu">
         <IconButton onClick={() => setNavToggle(!navToggle)}>
           <MenuIcon />
         </IconButton>
-      </div>
+      </div> */}
 
       <MainContentStyled>
         <Switching>
@@ -96,7 +95,7 @@ function App() {
 
 const MainContentStyled = styled.main`
   position: relative;
-  margin-left: 16.3rem;
+  /* margin-left: 16.3rem; */
   min-height: 100vh;
   @media only screen and (max-width: 1100px) {
     margin-left: 0;

@@ -14,13 +14,11 @@ export const InnerLayout = styled.div`
   .tech-stack {
       display: flex;
       flex-wrap: wrap;
-      /* grid-template-columns: repeat(3, 1fr); */
 
       .container {
         padding: 1rem;
         margin: 0.4rem;
         width: 420px;
-        /* border: 1px solid var(--font-light-color); */
         border-radius: 15px;
         background-color: var(--background-dark-grey);
       }

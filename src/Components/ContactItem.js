@@ -48,6 +48,31 @@ const ContactItemStyled = styled.div`
             padding: .1rem 0;
         }
     }
+
+    @media screen and (max-width: 400px){
+        padding:1rem 1rem;
+        width: 100%;
+
+        .left-content {
+            font-size: 5rem;
+            margin-right: 1rem;
+
+            svg{
+            font-size: 1.5rem;
+        }
+        }
+
+        .right-content {
+
+            h6 {
+                font-size: 1rem; 
+            }
+            p {
+                padding: 0;
+                font-size: 0.9rem;
+            }
+        }
+    }
 `;
 
 export default ContactItem;

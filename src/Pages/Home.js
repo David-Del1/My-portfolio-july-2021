@@ -5,10 +5,15 @@ import Particle from '../Components/Particles.js';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GithubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import About from './About.js';
+import PortfoliosPage from './Portfolio.js';
+import Contact from './Contact.js';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
 
 function Home() {
   return (
+    <>
     <HomeStyled>
       <div className="particle-con">
         <Particle />
@@ -30,7 +35,12 @@ function Home() {
           </a>
         </div>
       </div>
+      <ArrowDownwardIcon className="down-arrow" />
     </HomeStyled>
+    <About />
+    <PortfoliosPage />
+    <Contact />
+    </>
   )
 }
 
@@ -38,8 +48,8 @@ const HomeStyled = styled.header`
   width: 100%;
   height: 100vh;
   position: relative;
-
-  
+  display: flex;
+  justify-content: center;
 
   .particle-con {
     position: absolute;
@@ -55,9 +65,22 @@ const HomeStyled = styled.header`
     text-align: center;
     width: 100%;
 
+    p {
+      padding: 1rem 1rem;
+    }
+
     @media only screen and (max-width: 600px) {
       p {
         font-size: 1rem;
+      }
+    }
+    @media only screen and (max-width: 400px) {
+      h1 {
+        padding: 0 0.5rem;
+      }
+      p {
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
       }
     }
 
@@ -97,5 +120,21 @@ const HomeStyled = styled.header`
         }
 
   }}
+
+  .down-arrow {
+    font-size: 3.5rem;
+    position: absolute;
+    bottom: 4%;
+    animation-name: floating; 
+    animation-duration: 3s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes floating { 
+    0% { transform: translate(0,  0px); } 
+    50%  { transform: translate(0, 20px); } 
+    100%   { transform: translate(0, -0px); }     
+}
 `;
 export default Home

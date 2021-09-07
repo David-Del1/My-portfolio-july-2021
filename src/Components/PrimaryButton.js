@@ -3,15 +3,11 @@ import styled from 'styled-components';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import resume from '../images/resume.pdf';
 
-
 function PrimaryButton({title}) {
   return (
-    <PrimaryButtonStyled>
-      <a href={resume} download>
-
+    <PrimaryButtonStyled href={resume} download>
         {title}
-      </a>
-      <GetAppIcon />
+        <GetAppIcon />
     </PrimaryButtonStyled>
   );
 }
@@ -29,6 +25,7 @@ const PrimaryButtonStyled = styled.a`
   position: relative;
   transition: all ease-in-out .2s;
   z-index: 100;
+  border-radius: 5px;
 
   &::after {
     content: '';

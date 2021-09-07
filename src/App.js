@@ -6,14 +6,9 @@ import Portfolio from './Pages/Portfolio';
 import Blog from './Pages/Blog';
 import Contact from './Pages/Contact';
 import styled from 'styled-components'
-import Sidebar from './Components/Sidebar';
 import Home from './Pages/Home';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Switch from '@material-ui/core/Switch';
-import MenuIcon from '@material-ui/icons/Menu';
-import { IconButton } from "@material-ui/core";
-import { useNavToggle } from './state/AppProvider';
-
 
 function App() {
   const [theme, setTheme] = useState('dark-theme');
@@ -36,7 +31,6 @@ function App() {
   }
   return (
   <div className="App">
-      {/* <Sidebar navToggle={navToggle}/> */}
       <div className="theme">
         <div className="light-dark-mode">
           <div className="left-content">
@@ -52,12 +46,6 @@ function App() {
           </div>
       </div>
       </div>
-
-      {/* <div className="hamburger-menu">
-        <IconButton onClick={() => setNavToggle(!navToggle)}>
-          <MenuIcon />
-        </IconButton>
-      </div> */}
 
       <MainContentStyled>
         <Switching>

@@ -1,92 +1,36 @@
-import { Route, Switch as Switching } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import About from './Pages/About';
-import ResumePage from './Pages/ResumePage';
-import Portfolio from './Pages/Portfolio';
-import Blog from './Pages/Blog';
-import Contact from './Pages/Contact';
+
+import React from 'react';
 import styled from 'styled-components'
 import Home from './Pages/Home';
-import Brightness4Icon from '@material-ui/icons/Brightness4';
-import Switch from '@material-ui/core/Switch';
 
 function App() {
-  const [theme, setTheme] = useState('dark-theme');
-  const [checked, setChecked] = useState(false);
-
-  useEffect(() => {
-    document.documentElement.className= theme;
-  }, [theme]);
-
-  const themeToggle = () => {
-    if(theme === 'light-theme'){
-      setTheme('dark-theme');
-      setChecked(false);
-      
-    } else {
-      setTheme('light-theme');
-      setChecked(true);
-      
-    }
-  }
   return (
-  <div className="App">
-      <div className="theme">
-        <div className="light-dark-mode">
-          <div className="left-content">
-            <Brightness4Icon />
-          </div>
-          <div className="right-content">
-            <Switch 
-              value=""
-              checked={checked}
-              inputProps={{'aria-label': ''}}
-              size="medium"
-              onClick={themeToggle}/>
-          </div>
-      </div>
-      </div>
-
+  <AppStyled>
       <MainContentStyled>
-        <Switching>
-          <Route exact path="/">
-            <Home />
-          </Route>
-
-          <Route exact path="/about">
-            <About />
-          </Route>
-
-          <Route exact path="/resume">
-            <ResumePage />
-          </Route>
-
-          <Route exact path="/portfolio">
-            <Portfolio />
-          </Route>
-
-          <Route exact path="/blog">
-            <Blog />
-          </Route>
-
-          <Route exact path="/contact">
-            <Contact />
-          </Route>
-        </Switching>
-
-        
+          <Home />
       </MainContentStyled>
-  </div>
+  </AppStyled>
 
   );
 }
 
 const MainContentStyled = styled.main`
   position: relative;
-  /* margin-left: 16.3rem; */
   min-height: 100vh;
+
+  
   @media only screen and (max-width: 1100px) {
     margin-left: 0;
   }
 `;
+
+const AppStyled = styled.div`
+
+
+  .light-dark-mode {
+    
+
+    opacity: 0.8;
+  }
+`
 export default App;

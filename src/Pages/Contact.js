@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import {MainLayout, InnerLayout} from '../styles/Layout';
 import Title from '../Components/Title';
-import PrimaryButton from '../Components/PrimaryButton';
 import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
 import ContactItem from '../Components/ContactItem';
@@ -19,32 +18,14 @@ function Contact() {
                     <div className="contact-title">
                         <h4>Get In Touch</h4>
                     </div>
-                    <form  className="form">
-                        <div className="form-field">
-                            <label htmlFor="name"  ></label>
-                            <input type="text" id="name" placeholder="Your name*" required/>
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="email"  ></label>
-                            <input type="email" id="email" placeholder="Your Email*" required/>
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="subject"></label>
-                            <input type="text" id="subject" placeholder="Subject" required/>
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="text-area"></label>
-                            <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Enter your message here..."></textarea>
-                        </div>
-                        <div className="form-field f-button">
-                            <PrimaryButton title={'Send Email'} />
-                        </div>
-                    </form>
                 </div>
                 <div className="right-content">
-                    <ContactItem title={'Phone'} icon={phone} cont1={'+1(909)731-4075'} />
-                    <ContactItem title={'Email'} icon={email} cont1={'DavidDel.731@gmail.com'} />
-                    
+                    <a href="tel:9097314075">
+                        <ContactItem title={'Phone'} icon={phone} cont1={'+1(909)731-4075'} />
+                    </a>
+                    <a href="mailto:daviddel.731@gmail.com">
+                        <ContactItem title={'Email'} icon={email} cont1={'DavidDel.731@gmail.com'} />
+                    </a>
                 </div>
             </InnerLayout>
             </ContactPageStyled>
@@ -54,9 +35,7 @@ function Contact() {
 
 const ContactPageStyled = styled.section`
     .contact-section{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 2rem;
+
         @media screen and (max-width: 978px){
             grid-template-columns: repeat(1, 1fr);
             .f-button{
@@ -65,6 +44,7 @@ const ContactPageStyled = styled.section`
         }
         .right-content{
             display: grid;
+            grid-gap: 1rem;
             grid-template-columns: repeat(1, 1fr);
             @media screen and (max-width: 502px){
                 width: 70%;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Particle from '../Components/Particles.js';
 // icon imports
@@ -9,14 +9,54 @@ import About from './About.js';
 import PortfoliosPage from './Portfolio.js';
 import Contact from './Contact.js';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import avatar from '../images/me.jpeg';
+import Brightness4Icon from '@material-ui/icons/Brightness4';
+import Switch from '@material-ui/core/Switch';
 
 
 function Home() {
+  const [theme, setTheme] = useState('dark-theme');
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.className= theme;
+  }, [theme]);
+
+  const themeToggle = () => {
+    if(theme === 'light-theme'){
+      setTheme('dark-theme');
+      setChecked(false);
+      
+    } else {
+      setTheme('light-theme');
+      setChecked(true);
+      
+    }
+  }
+
   return (
     <>
     <HomeStyled>
       <div className="particle-con">
         <Particle />
+      </div>
+      <div className="theme">
+        <div className="light-dark-mode">
+          <div className="left-content">
+            <Brightness4Icon />
+          </div>
+          <div className="right-content">
+            <Switch 
+              value=""
+              checked={checked}
+              inputProps={{'aria-label': ''}}
+              size="medium"
+              onClick={themeToggle}/>
+          </div>
+      </div>
+      </div>
+      <div className="avatar">
+        <img src={avatar} alt="me" />
       </div>
       <div className="typography">
         <h1>Hi, I'm <span>David Delgadillo</span></h1>
@@ -37,8 +77,8 @@ function Home() {
       </div>
       <ArrowDownwardIcon className="down-arrow" />
     </HomeStyled>
-    <About />
     <PortfoliosPage />
+    <About />
     <Contact />
     </>
   )
@@ -50,6 +90,61 @@ const HomeStyled = styled.header`
   position: relative;
   display: flex;
   justify-content: center;
+
+  .avatar {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+
+    
+    img {
+      height: 250px;
+      width: 250px;
+      object-fit: cover;
+      object-position: 0 -10px;
+      border-radius: 50%;
+      border: 8px solid var(--border-color);
+      box-shadow: 0px 0px 10px 0px black;
+    }
+
+    @media only screen and (max-width: 800px) {
+      
+      img {
+        height: 200px;
+        width: 200px;
+      }
+    }
+    @media only screen and (max-width: 550px) {
+      
+      img {
+        height: 180px;
+        width: 180px;
+      }
+    }
+    @media only screen and (max-width: 420px) {
+      
+      img {
+        height: 150px;
+        width: 150px;
+      }
+    }
+    @media only screen and (max-width: 320px) {
+      
+      img {
+        height: 120px;
+        width: 120px;
+      }
+    }
+  }
+
+  .theme {
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+  }
 
   .particle-con {
     position: absolute;
@@ -124,7 +219,7 @@ const HomeStyled = styled.header`
   .down-arrow {
     font-size: 3.5rem;
     position: absolute;
-    bottom: 4%;
+    bottom: 15%;
     animation-name: floating; 
     animation-duration: 3s; 
     animation-iteration-count: infinite; 

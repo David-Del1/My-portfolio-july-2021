@@ -2,12 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import {MainLayout, InnerLayout} from '../styles/Layout';
 import Title from '../Components/Title';
-import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
 import ContactItem from '../Components/ContactItem';
 
 function Contact() {
-    const phone = <PhoneIcon />
     const email = <EmailIcon />
     return (
         <MainLayout>
@@ -20,9 +18,6 @@ function Contact() {
                     </div>
                 </div>
                 <div className="right-content">
-                    <a href="tel:9097314075">
-                        <ContactItem title={'Phone'} icon={phone} cont1={'+1(909)731-4075'} />
-                    </a>
                     <a href="mailto:daviddel.731@gmail.com">
                         <ContactItem title={'Email'} icon={email} cont1={'DavidDel.731@gmail.com'} />
                     </a>

@@ -50,7 +50,7 @@ const ArrowStyled = styled.div`
     background-color: var(--border-color);
     border-radius: 50%;
     font-size: 2rem;
-    box-shadow: 0px 0px 10px 0px black;
+    box-shadow: 0px 0px 5px 0px black;
     transition: opacity ease-in-out 0.5s;
   }
 
@@ -60,7 +60,7 @@ const ArrowStyled = styled.div`
     background-color: var(--border-color);
     border-radius: 50%;
     font-size: 2rem;
-    box-shadow: 0px 0px 10px 0px black;
+    box-shadow: 0px 0px 5px 0px black;
     transition: opacity ease-in-out 0.5s;
   }
 `;

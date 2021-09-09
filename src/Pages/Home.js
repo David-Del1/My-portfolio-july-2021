@@ -105,13 +105,13 @@ const HomeStyled = styled.header`
     z-index: 10;
     
     img {
-      height: 250px;
-      width: 250px;
+      height: 200px;
+      width: 200px;
       object-fit: cover;
       object-position: 0 -10px;
       border-radius: 50%;
       border: 8px solid var(--border-color);
-      box-shadow: 0px 0px 10px 0px black;
+      box-shadow: 0px 0px 5px 0px black;
     }
 
     @media only screen and (max-width: 800px) {

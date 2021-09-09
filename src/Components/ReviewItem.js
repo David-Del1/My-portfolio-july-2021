@@ -1,25 +1,76 @@
 import React from 'react';
 import styled from 'styled-components';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
-function ReviewItem({text}) {
+const reviews = [
+  {
+    name: 'Johnny',
+    text: 'Lorem ipsum'
+  },
+  {
+    name: 'Kelly',
+    text: 'Lorem ipsum'
+  },
+  {
+    name: 'Nick',
+    text: 'Lorem ipsum'
+  },
+  {
+    name: 'Fred',
+    text: 'Lorem ipsum'
+  },
+]
+
+function ReviewItem() {
+
+  const settings = {
+      dots: true,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      speed: 1000,
+      autoplaySpeed: 5500,
+      cssEase: "ease-in-out",
+      swipeToSlide: true,
+      arrows: false,
+      
+    };
   return (
     <ReviewItemStyled>
-      <p>{text}</p>
-      
+      <Slider {...settings}>
+        <div>
+          <p className="review-text">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex earum reiciendis fuga ipsum fugiat vitae neque expedita eum amet animi."</p>
+          <p className="reviewer-name">{reviews[0].name}</p>
+        </div>
+        <div>
+          <p className="review-text">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex earum reiciendis fuga ipsum fugiat vitae neque expedita eum amet animi."</p>
+          <p className="reviewer-name">{reviews[1].name}</p>
+        </div>
+        <div>
+          <p className="review-text">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex earum reiciendis fuga ipsum fugiat vitae neque expedita eum amet animi."</p>
+          <p className="reviewer-name">{reviews[2].name}</p>
+        </div>
+      </Slider>
     </ReviewItemStyled>
   );
 }
 
 const ReviewItemStyled = styled.div`
-  padding: 2rem 1rem;
-  border-left: 6px solid var(--border-color);
-  border-radius: 10px;
+  width: 40vw;
   background-color: var(--background-dark-grey);
+  padding: 2rem 1rem;
+  margin: 0 1rem;
+  border-left: 6px solid var(--primary-color);
+  border-radius: 10px;
   position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  
+
+  @media only screen and (max-width: 1000px) {
+      width: 90vw;
+    }
+
   &::after {
     content: '';
     position: absolute;
@@ -28,10 +79,16 @@ const ReviewItemStyled = styled.div`
     top: 100%;
     border-style: solid;
     border-color: var(--background-dark-grey) transparent transparent var(--background-dark-grey);
-
   }
-  p {
-    padding: 0rem 0;
+
+  .review-text {
+    font-style: italic;
+    padding: 0 0.5rem;
+  }
+
+  .reviewer-name {
+    text-align: right;
+    padding: 0.5rem;
   }
 `;
 

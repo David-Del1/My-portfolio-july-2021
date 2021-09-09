@@ -13,6 +13,7 @@ function ReviewItem({text}) {
 const ReviewItemStyled = styled.div`
   padding: 2rem 1rem;
   border-left: 6px solid var(--border-color);
+  border-radius: 10px;
   background-color: var(--background-dark-grey);
   position: relative;
   width: 100%;

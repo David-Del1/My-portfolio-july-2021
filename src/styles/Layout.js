@@ -12,13 +12,18 @@ export const InnerLayout = styled.div`
   padding: 4rem 0;
 
   .tech-stack {
-      display: flex;
-      flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    @media screen and (max-width:920px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width:670px){
+        grid-template-columns: repeat(1, 1fr);
+    }
 
       .container {
         padding: 1rem;
-        margin: 0.4rem;
-        width: 420px;
         border-radius: 15px;
         background-color: var(--background-dark-grey);
       }

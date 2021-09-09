@@ -12,6 +12,8 @@ import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import avatar from '../images/me.jpeg';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Switch from '@material-ui/core/Switch';
+import ScrollToTop from '../Components/scroll/ScrollToTop.js';
+import Footer from '../Components/footer/Footer.jsx';
 
 
 function Home() {
@@ -76,10 +78,12 @@ function Home() {
         </div>
       </div>
       <ArrowDownwardIcon className="down-arrow" />
+    <ScrollToTop />
     </HomeStyled>
     <PortfoliosPage />
     <About />
     <Contact />
+    <Footer />
     </>
   )
 }
@@ -98,7 +102,7 @@ const HomeStyled = styled.header`
     justify-content: center;
     align-items: center;
     padding-bottom: 1rem;
-
+    z-index: 10;
     
     img {
       height: 250px;

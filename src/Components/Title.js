@@ -17,27 +17,6 @@ const TitleStyled = styled.div`
     font-weight: 600;
     position: relative;
     padding-bottom: 0.6rem;
-    /* &::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 9rem;
-      height: .33rem;
-      background-color: var(--background-light-color-2);
-      border-radius: 5px;
-    } */
-    /* &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      width: 7rem;
-      height: .33rem;
-      background-color: var(--primary-color);
-      border-radius: 5px;
-      left: 0;
-      opacity: 0.6;
-    } */
 
     @media screen and (max-width: 800px) {
         font-size: 3rem;

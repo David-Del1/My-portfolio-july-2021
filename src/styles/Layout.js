@@ -42,6 +42,11 @@ export const InnerLayout = styled.div`
         
         border-radius: 10px;
         background-color: var(--border-color);
+        transition: border ease-in-out 0.3s;
+
+        &:hover {
+          border: 1px solid var(--primary-color)
+        }
       }
     }
   @media screen and (max-width: 700px) {

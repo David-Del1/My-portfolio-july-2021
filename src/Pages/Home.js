@@ -14,6 +14,7 @@ import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Switch from '@material-ui/core/Switch';
 import ScrollToTop from '../Components/scroll/ScrollToTop.js';
 import Footer from '../Components/footer/Footer.jsx';
+import Header from '../Components/header/Header.jsx';
 
 
 function Home() {
@@ -38,6 +39,7 @@ function Home() {
 
   return (
     <>
+    <Header />
     <HomeStyled>
       <div className="particle-con">
         <Particle />

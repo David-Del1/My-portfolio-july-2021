@@ -62,7 +62,6 @@ const ReviewItemStyled = styled.div`
   width: 40vw;
   background-color: var(--background-dark-grey);
   padding: 2rem 1rem;
-  margin: 0 1rem;
   border-left: 6px solid var(--primary-color);
   border-radius: 10px;
   position: relative;

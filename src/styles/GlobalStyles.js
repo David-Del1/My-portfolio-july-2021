@@ -71,7 +71,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     background-color: var(--background-dark-color);
     color: var(--font-light-color);
-    transition: all ease-in-out 1s;
+    transition: background-color ease-in-out 1s;
     overflow-x: hidden;
   }
 

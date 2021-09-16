@@ -32,16 +32,13 @@ export const InnerLayout = styled.div`
         font-size: 1.7rem;
         padding: 0 0.2rem;
         color: var(--white-color);
-        opacity: 0.8;
-        border-bottom: 1px solid var(--border-color);
       }
 
       li {
         padding: 0.5rem 0.5rem;
         margin: 0.5rem 0;
-        
-        border-radius: 10px;
-        background-color: var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+        width: 95%;
       }
     }
   @media screen and (max-width: 700px) {

@@ -1,19 +1,17 @@
-import img1 from '../images/blogs/blog4.svg';
+import chordialImg from '../images/chordial.png';
 
 const portfolio = [
   {
     id: 1,
-    category: 'JavaScript',
-    image: img1,
+    image: chordialImg,
     link1: 'link1',
     link2: 'link2',
-    title: 'title',
-    text: 'lorem ipsum'
+    title: 'Chordial',
+    text: "ReactJS, Redux, NodeJS, Express. Allows users to create beautiful harmonic sequences from curated collections of musical chords."
   },
   {
     id: 2,
-    category: 'JavaScript',
-    image: img1,
+    image: chordialImg,
     link1: 'link1',
     link2: 'link2',
     title: 'title',
@@ -21,8 +19,7 @@ const portfolio = [
   },
   {
     id: 3,
-    category: 'SQL',
-    image: img1,
+    image: chordialImg,
     link1: 'link1',
     link2: 'link2',
     title: 'title',
@@ -30,8 +27,7 @@ const portfolio = [
   },
   {
     id: 4,
-    category: 'Python',
-    image: img1,
+    image: chordialImg,
     link1: 'link1',
     link2: 'link2',
     title: 'title',
@@ -39,8 +35,15 @@ const portfolio = [
   },
   {
     id: 5,
-    category: 'React JS',
-    image: img1,
+    image: chordialImg,
+    link1: 'link1',
+    link2: 'link2',
+    title: 'title',
+    text: 'lorem ipsum'
+  },
+  {
+    id: 6,
+    image: chordialImg,
     link1: 'link1',
     link2: 'link2',
     title: 'title',

@@ -50,8 +50,9 @@ const ArrowStyled = styled.div`
     background-color: var(--border-color);
     border-radius: 50%;
     font-size: 2rem;
-    box-shadow: 0px 0px 5px 0px black;
-    transition: opacity ease-in-out 0.5s;
+    border: 1px solid var(--secondary-color);
+    transition: opacity ease-in-out 0.3s;
+
   }
 
   .invisible {
@@ -60,8 +61,7 @@ const ArrowStyled = styled.div`
     background-color: var(--border-color);
     border-radius: 50%;
     font-size: 2rem;
-    box-shadow: 0px 0px 5px 0px black;
-    transition: opacity ease-in-out 0.5s;
+    transition: opacity ease-in-out 0.3s;
   }
 `;
 

@@ -148,7 +148,7 @@ const HomeStyled = styled.header`
 
   .theme {
     position: absolute;
-    bottom: 10%;
+    top: 10%;
     right: 0;
   }
 

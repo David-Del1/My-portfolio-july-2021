@@ -23,12 +23,7 @@ function Header() {
   return (
     <HeaderStyled>
       <div className={isVisible ? 'nav-link-container' : 'hidden'}>
-        <ul>
-          <li>Portfolio</li>
-          <li>About</li>
-          <li>Tech Stack</li>
-          <li>Contact</li>
-        </ul>
+        <h1>David Delgadillo</h1>
 
       </div>
     </HeaderStyled>
@@ -50,10 +45,15 @@ const HeaderStyled = styled.header`
   z-index: 1001;
   transition: top ease-in-out 0.5s;
   border-bottom: 1px solid black;
-  ul {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
+  h1 {
+    padding: 1rem;
+    font-size: 1.8rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -68,10 +68,10 @@ const HeaderStyled = styled.header`
   z-index: 1001;
   top: -500px;
   transition: top ease-in-out 0.5s;
-  ul {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
+  h1 {
+    padding: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
   }
 }
 

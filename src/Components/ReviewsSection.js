@@ -12,7 +12,6 @@ function ReviewsSection() {
         <InnerLayout>
           <div className="reviews">
             <ReviewItem />
-            <ReviewItem />
           </div>
         </InnerLayout>
       </ReviewsStyled>

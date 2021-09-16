@@ -32,22 +32,23 @@ function ReviewItem() {
       slidesToScroll: 1,
       autoplay: true,
       speed: 1000,
-      autoplaySpeed: 5500,
+      autoplaySpeed: 6500,
       cssEase: "ease-in-out",
       swipeToSlide: true,
       arrows: false,
       
     };
   return (
+    <>
     <ReviewItemStyled>
       <Slider {...settings}>
         <div>
-          <p className="review-text">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex earum reiciendis fuga ipsum fugiat vitae neque expedita eum amet animi."</p>
-          <p className="reviewer-name">{reviews[0].name}</p>
+          <p className="review-text">"David is a dedicated developer. He always comes up with eloquent solutions to complicated problems. He’s enthusiastic and goes above and beyond to mentor his peers."</p>
+          <p className="reviewer-name">Tucker Hogg</p>
         </div>
         <div>
-          <p className="review-text">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex earum reiciendis fuga ipsum fugiat vitae neque expedita eum amet animi."</p>
-          <p className="reviewer-name">{reviews[1].name}</p>
+          <p className="review-text">"I have been very impressed with David. He learns quickly, and is ready to take on any challenge. I think David would no doubt be a positive addition to any team he is on. I have taught hundreds of students and David has some of the highest potential I've seen."</p>
+          <p className="reviewer-name">Devonta Johnson</p>
         </div>
         <div>
           <p className="review-text">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex earum reiciendis fuga ipsum fugiat vitae neque expedita eum amet animi."</p>
@@ -55,6 +56,23 @@ function ReviewItem() {
         </div>
       </Slider>
     </ReviewItemStyled>
+    <ReviewItemStyled>
+      <Slider {...settings}>
+        <div>
+          <p className="review-text">"David is a dedicated developer. He always comes up with eloquent solutions to complicated problems. He’s enthusiastic and goes above and beyond to mentor his peers."</p>
+          <p className="reviewer-name">Tucker Hogg</p>
+        </div>
+        <div>
+          <p className="review-text">"I have been very impressed with David. He learns quickly, and is ready to take on any challenge. I think David would no doubt be a positive addition to any team he is on. I have taught hundreds of students and David has some of the highest potential I've seen."</p>
+          <p className="reviewer-name">Devonta Johnson</p>
+        </div>
+        <div>
+          <p className="review-text">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex earum reiciendis fuga ipsum fugiat vitae neque expedita eum amet animi."</p>
+          <p className="reviewer-name">{reviews[2].name}</p>
+        </div>
+      </Slider>
+    </ReviewItemStyled>
+    </>
   );
 }
 
@@ -81,8 +99,10 @@ const ReviewItemStyled = styled.div`
   }
 
   .review-text {
+    font-size: 1rem;
     font-style: italic;
     padding: 0 0.5rem;
+    width: 100%;
   }
 
   .reviewer-name {

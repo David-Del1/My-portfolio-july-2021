@@ -11,7 +11,10 @@ function Menu({menuItem}) {
                 return <div className="grid-item" key={item.id}>
                     <div className="portfolio-content">
                         <div className="portfolio-image">
-                            <img src={item.image} alt=""/>
+                            <img 
+                            src={item.image} 
+                            alt=""
+                            />
                             <ul>
                                 <li>
                                     <a href={item.link1}>
@@ -60,7 +63,14 @@ const MenuItemStyled = styled.div`
             img{
                 width: 100%;
                 height: 30vh;
-                object-fit: cover;
+                object-fit: contain;
+                transition: all ease-in-out 0.2s;
+                &:hover {
+                    filter: blur(2px);
+                }
+            }
+            p {
+                font-size: 1rem;
             }
             ul{
                 display: flex;
@@ -92,18 +102,6 @@ const MenuItemStyled = styled.div`
                         }
                     }
             }
-            .portfolio-image{
-            
-                &::before{
-                    content: "";
-                    position: absolute;
-                    left: 2%;
-                    top: 4%;
-                    height: 0;
-                    width: 0;
-                    transition: all .4s ease-in-out;
-                }
-            }
             .portfolio-image:hover{
                 ul{
                     transform: translateY(0);
@@ -111,11 +109,12 @@ const MenuItemStyled = styled.div`
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    transition: all .4s ease-in-out;
+                    transition: all .3s ease-in-out;
                     opacity: 1;
+                    height: 0;
                     li{
                         transition: all .4s ease-in-out;
-                    
+                        margin-bottom: 3rem;
                         &:hover{
                             background-color: var(--primary-color);
                         }
@@ -133,16 +132,8 @@ const MenuItemStyled = styled.div`
                     }
                     svg{
                         font-size: 2rem;
+                        
                     }
-                }
-                &::before{
-                    height: calc(100% - 35%) ;
-                    width: calc(100% - 4%);
-                    background-color: white;
-                    opacity: 0.5;
-                    transform-origin: left;
-                    border-radius: 25px;
-                    transition: all .4s ease-in-out;
                 }
             }
         }

@@ -1,12 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
 import {InnerLayout} from '../styles/Layout.js';
 import Title from './Title';
 
 function Skills() {
   return (
-    <SkillsStyled>
-  
+    <>
         <Title title={'Tech Stack'} span={"Tech Stack"} />
         <InnerLayout>
           <div className="tech-stack">
@@ -56,13 +54,8 @@ function Skills() {
           </div>
         
         </InnerLayout>
-  
-    </SkillsStyled>
+        </>
   );
 }
-
-const SkillsStyled = styled.div`
-
-`
 
 export default Skills;

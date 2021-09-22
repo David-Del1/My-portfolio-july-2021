@@ -4,25 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-const reviews = [
-  {
-    name: 'Johnny',
-    text: 'Lorem ipsum'
-  },
-  {
-    name: 'Kelly',
-    text: 'Lorem ipsum'
-  },
-  {
-    name: 'Nick',
-    text: 'Lorem ipsum'
-  },
-  {
-    name: 'Fred',
-    text: 'Lorem ipsum'
-  },
-]
-
 function ReviewItem() {
 
   const settings = {
@@ -51,24 +32,10 @@ function ReviewItem() {
           <p className="reviewer-name">Devonta Johnson</p>
         </div>
         <div>
-          <p className="review-text">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex earum reiciendis fuga ipsum fugiat vitae neque expedita eum amet animi."</p>
-          <p className="reviewer-name">{reviews[2].name}</p>
-        </div>
-      </Slider>
-    </ReviewItemStyled>
-    <ReviewItemStyled>
-      <Slider {...settings}>
-        <div>
-          <p className="review-text">"David is a dedicated developer. He always comes up with eloquent solutions to complicated problems. He’s enthusiastic and goes above and beyond to mentor his peers."</p>
-          <p className="reviewer-name">Tucker Hogg</p>
-        </div>
-        <div>
-          <p className="review-text">"I have been very impressed with David. He learns quickly, and is ready to take on any challenge. I think David would no doubt be a positive addition to any team he is on. I have taught hundreds of students and David has some of the highest potential I've seen."</p>
-          <p className="reviewer-name">Devonta Johnson</p>
-        </div>
-        <div>
-          <p className="review-text">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex earum reiciendis fuga ipsum fugiat vitae neque expedita eum amet animi."</p>
-          <p className="reviewer-name">{reviews[2].name}</p>
+          <p className="review-text">
+           David consistently went above and beyond in projects. He was a pleasure to work with and contributed professional, clean, and well tested code during his collaborations. David is a great software engineer and an awesome person to work with.
+          </p>
+          <p className="reviewer-name">Dan Bennington</p>
         </div>
       </Slider>
     </ReviewItemStyled>
@@ -77,7 +44,7 @@ function ReviewItem() {
 }
 
 const ReviewItemStyled = styled.div`
-  width: 40vw;
+  width: 60vw;
   background-color: var(--background-dark-grey);
   padding: 2rem 1rem;
   border-left: 6px solid var(--primary-color);

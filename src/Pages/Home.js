@@ -65,7 +65,7 @@ function Home() {
       <div className="typography">
         <h1>Hi, I'm <span>David Delgadillo</span></h1>
         <p>
-          I'm a Full Stack software developer based in Orange County, CA.<br /> Welcome to my portfolio site.
+          I'm a full stack software developer based in Orange County, CA.<br /> Welcome to my portfolio site.
         </p>
         <div className="icons">
           <a href="https://www.linkedin.com/in/davidadelgadillo/" className="i-linkedIn icon" target="_blank" rel="noreferrer">

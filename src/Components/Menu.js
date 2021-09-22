@@ -17,12 +17,12 @@ function Menu({menuItem}) {
                             />
                             <ul>
                                 <li>
-                                    <a href={item.link1}>
+                                    <a href={item.link1} target="_blank" rel="noreferrer">
                                         <GitHub />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href={item.link2}>
+                                    <a href={item.link2} target="_blank" rel="noreferrer">
                                         <LaunchIcon />
                                     </a>
                                 </li>

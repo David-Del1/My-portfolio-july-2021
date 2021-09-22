@@ -48,8 +48,7 @@ const HeaderStyled = styled.header`
   h1 {
     padding: 1rem;
     font-size: 1.8rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
 
     @media only screen and (max-width: 600px) {
       font-size: 1.5rem;
@@ -69,9 +68,8 @@ const HeaderStyled = styled.header`
   top: -500px;
   transition: top ease-in-out 0.5s;
   h1 {
-    padding: 1rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 300;
+    font-size: 1.8rem;
+    font-weight: 400;
   }
 }
 

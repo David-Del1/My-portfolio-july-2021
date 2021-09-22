@@ -14,7 +14,7 @@ function ImageSection() {
         <h4>Fullstack <span>Developer.</span></h4>
         <h4>Problem <span>Solver.</span></h4>
         <div className="description">
-          <p> <span>Profile:</span> Software Engineer dedicated to creating practical, intuitive, and accessible solutions with software. A self-motivated and insatiably curious lifelong learner passionately optimistic about people's ability to solve problems.</p>
+          <p> <span>Profile:</span> Software Engineer who loves coding and technology. A self-starter dedicated to creating practical, intuitive, and accessible solutions with software. An insatiably curious lifelong learner who's intensely optimistic about human nature and our ability to solve problems.</p>
         </div>
         <PrimaryButton title={'Download Resume'}/>
       </div>

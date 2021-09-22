@@ -18,7 +18,7 @@ function ServicesSection() {
           <ServiceCard image={goals} title={"MVC Architecture"} 
             paragraph={"Capable of employing MVC architecture principles to create a modular and maintainable code base with reusable components."}/>
           <ServiceCard image={undraw2} title={"Visualization Tools"} 
-            paragraph={"Good software starts with good planning. Proficient with design software such as the Adobe Creative Suite to create wireframes and realize the vision of applications."}/>
+            paragraph={"Good software starts with good planning. Proficient with design software such as Adobe XD/Illustrator to create wireframes and produce tangible blueprints."}/>
         </div>
       </ServicesStyled>
     </InnerLayout>

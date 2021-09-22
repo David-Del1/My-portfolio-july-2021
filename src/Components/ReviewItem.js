@@ -50,7 +50,6 @@ const ReviewItemStyled = styled.div`
   border-left: 6px solid var(--primary-color);
   border-radius: 10px;
   position: relative;
-
   @media only screen and (max-width: 1000px) {
       width: 90vw;
     }

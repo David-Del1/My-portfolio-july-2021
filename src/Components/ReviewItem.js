@@ -31,6 +31,10 @@ function ReviewItem() {
           <p className="review-text">"I have been very impressed with David. He learns quickly, and is ready to take on any challenge. I think David would no doubt be a positive addition to any team he is on. I have taught hundreds of students and David has some of the highest potential I've seen."</p>
           <p className="reviewer-name">Devonta Johnson</p>
         </div>
+      </Slider>
+    </ReviewItemStyled>
+    <ReviewItemStyled>
+      <Slider {...settings}>
         <div>
           <p className="review-text">
            "David consistently went above and beyond in projects. He was a pleasure to work with and contributed professional, clean, and well tested code during his collaborations. David is a great software engineer and an awesome person to work with."
@@ -50,7 +54,7 @@ function ReviewItem() {
 }
 
 const ReviewItemStyled = styled.div`
-  width: 60vw;
+  width: 45vw;
   background-color: var(--background-dark-grey);
   padding: 2rem 1rem;
   border-left: 6px solid var(--primary-color);

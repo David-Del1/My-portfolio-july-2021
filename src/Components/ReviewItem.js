@@ -12,8 +12,8 @@ function ReviewItem() {
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
-      speed: 1000,
-      autoplaySpeed: 6500,
+      speed: 2000,
+      autoplaySpeed: 12000,
       cssEase: "ease-in-out",
       swipeToSlide: true,
       arrows: false,
@@ -33,9 +33,15 @@ function ReviewItem() {
         </div>
         <div>
           <p className="review-text">
-           David consistently went above and beyond in projects. He was a pleasure to work with and contributed professional, clean, and well tested code during his collaborations. David is a great software engineer and an awesome person to work with.
+           "David consistently went above and beyond in projects. He was a pleasure to work with and contributed professional, clean, and well tested code during his collaborations. David is a great software engineer and an awesome person to work with."
           </p>
           <p className="reviewer-name">Dan Bennington</p>
+        </div>
+        <div>
+          <p className="review-text">
+            "Working with David during a remote ten day sprint, his commitment to hard work, clean code, test driven development, and teamwork was unmistakable. David was unequivocally a prodigious asset to our team."
+          </p>
+          <p className="reviewer-name">Casey Cameron</p>
         </div>
       </Slider>
     </ReviewItemStyled>

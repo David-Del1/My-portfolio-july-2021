@@ -37,6 +37,12 @@ function ReviewItem() {
       <Slider {...settings}>
         <div>
           <p className="review-text">
+            "David has a lot of determination and curiosity as a software developer. I watched him anchor teams with his consistent focus on results and seeing things to the finish line. He also exhibits a natural tendency to ask more questions and probe deeper into the technologies he uses, going beyond just “getting it to work” and really grappling with developing a personal, foundational understanding."
+          </p>
+          <p className="reviewer-name">Marty Nelson</p>
+        </div>
+        <div>
+          <p className="review-text">
            "David consistently went above and beyond in projects. He was a pleasure to work with and contributed professional, clean, and well tested code during his collaborations. David is a great software engineer and an awesome person to work with."
           </p>
           <p className="reviewer-name">Dan Bennington</p>

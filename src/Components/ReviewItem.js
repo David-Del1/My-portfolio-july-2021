@@ -23,13 +23,17 @@ function ReviewItem() {
     <>
     <ReviewItemStyled>
       <Slider {...settings}>
+      <div>
+          <p className="review-text">"I have been very impressed with David. He learns quickly, and is ready to take on any challenge. I think David would no doubt be a positive addition to any team he is on. I have taught hundreds of students and David has some of the highest potential I've seen."</p>
+          <p className="reviewer-name">Devonta Johnson</p>
+        </div>
         <div>
           <p className="review-text">"David is a dedicated developer. He always comes up with eloquent solutions to complicated problems. He’s enthusiastic and goes above and beyond to mentor his peers."</p>
           <p className="reviewer-name">Tucker Hogg</p>
         </div>
         <div>
-          <p className="review-text">"I have been very impressed with David. He learns quickly, and is ready to take on any challenge. I think David would no doubt be a positive addition to any team he is on. I have taught hundreds of students and David has some of the highest potential I've seen."</p>
-          <p className="reviewer-name">Devonta Johnson</p>
+          <p className="review-text">"I have worked with a David on several projects and it was a pleasure each time. He’s engaging, curious, a skilled developer and a quality team player. 10/10 would have him on my team again."</p>
+          <p className="reviewer-name">Joe Davis</p>
         </div>
       </Slider>
     </ReviewItemStyled>

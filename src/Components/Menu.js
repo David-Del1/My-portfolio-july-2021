@@ -11,10 +11,15 @@ function Menu({menuItem}) {
                 return <div className="grid-item" key={item.id}>
                     <div className="portfolio-content">
                         <div className="portfolio-image">
-                            <img 
-                            src={item.image} 
-                            alt=""
-                            />
+                            <video
+                            // src={item.image} 
+                            // alt=""
+                            // controls
+                            autoPlay
+                            loop={true}
+                            >
+                              <source src={item.image} />
+                            </video>
                             <ul>
                                 <li>
                                     <a href={item.link1} target="_blank" rel="noreferrer">
@@ -29,6 +34,7 @@ function Menu({menuItem}) {
                             </ul>
                         </div>
                         <h6>{item.title}</h6>
+                        <p className="tech_stack">{item.techStack}</p>
                         <p>{item.text}</p>
                     </div>
                 </div>
@@ -60,7 +66,7 @@ const MenuItemStyled = styled.div`
             h6{
                 font-size: 1.5rem;
             }
-            img{
+            video{
                 width: 100%;
                 height: 30vh;
                 object-fit: contain;
@@ -71,6 +77,12 @@ const MenuItemStyled = styled.div`
             }
             p {
                 font-size: 1rem;
+            }
+
+            .tech_stack {
+              font-size: 0.8rem;
+              margin-bottom: 10px;
+              opacity: 0.6;
             }
             ul{
                 display: flex;

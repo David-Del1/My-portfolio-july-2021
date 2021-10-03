@@ -16,7 +16,7 @@ function ServicesSection() {
           <ServiceCard image={design} title={"TDD"} 
             paragraph={"Practiced in testing libraries such as QUnit and Jest to ensure product features are rigorously tested following industry-standard coding practices."}/>
           <ServiceCard image={goals} title={"MVC Architecture"} 
-            paragraph={"Capable of employing MVC architecture principles to create a modular and maintainable code base with reusable components."}/>
+            paragraph={"Capable of employing MVC architecture principles to create a modular and scalable code base with reusable components."}/>
           <ServiceCard image={undraw2} title={"Visualization Tools"} 
             paragraph={"Good software starts with good planning. Proficient with design software such as Adobe XD/Illustrator to create wireframes and produce tangible blueprints."}/>
         </div>

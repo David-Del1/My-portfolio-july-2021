@@ -61,7 +61,7 @@ function Contact() {
               </div>
               <div className="form-field">
                 <label htmlFor="text-area">Enter Your Message</label>
-                <textarea id="textarea" name="message" type="textarea" cols="30" rows="12" required onChange={handleChange} />
+                <textarea id="textarea" name="message" type="textarea" cols="30" rows="12" required onChange={handleChange}></textarea>
                 <div>
                   <div data-netlify-recaptcha="true"></div>
                 </div>

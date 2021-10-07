@@ -21,15 +21,29 @@
   </head>
   <body>
 
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden action='/'>
-      <label htmlFor="name">Enter Your Name <span>*</span></label>
-                <input id="name" name="name" type="text" required />
-                <label htmlFor="email">Enter Your Email <span>*</span></label>
-                <input id="email" name="email" type="text" required />
-                <label htmlFor="subject">Subject <span>*</span></label>
-                <input id="subject" name="subject" type="text" required/>
-                <textarea id="textarea" name="message" type="textarea" cols="30" rows="12" required ></textarea>
-    </form>
+    <form hidden className="form" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+      <input type="hidden" name="contact" value="contact" />
+        <div className="form-field">
+          <label htmlFor="name">Enter Your Name <span>*</span></label>
+          <input id="name" name="name" type="text" required  />
+        </div>
+        <div className="form-field">
+          <label htmlFor="email">Enter Your Email <span>*</span></label>
+          <input id="email" name="email" type="text" required  />
+        </div>
+        <div className="form-field">
+          <label htmlFor="subject">Subject <span>*</span></label>
+          <input id="subject" name="subject" type="text" required />
+        </div>
+        <div className="form-field">
+          <label htmlFor="text-area">Enter Your Message</label>
+          <textarea id="textarea" name="message" type="textarea" cols="30" rows="12" required></textarea>
+          <div>
+            <div data-netlify-recaptcha="true"></div>
+          </div>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
 
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>

@@ -6,15 +6,16 @@ import ContactItem from '../Components/ContactItem.js';
 import PhoneIphoneOutlinedIcon from '@material-ui/icons/PhoneIphoneOutlined';
 import EmailIcon from '@material-ui/icons/Email';
 
+const initialState = {
+  name: '',
+  email: '',
+  subject: '',
+  message: '',
+}
+
 function Contact() {
-  // eslint-disable-next-line
-  const [name, setName] = useState('');
-  // eslint-disable-next-line
-  const [emailInput, setEmailInput] = useState('');
-  // eslint-disable-next-line
-  const [subject, setSubject] = useState('');
-  // eslint-disable-next-line
-  const [message, setMessage] = useState('');
+  const [formData, setFormData] = useState(initialState);
+
   const phone = <PhoneIphoneOutlinedIcon />
   const email = <EmailIcon />
 
@@ -28,7 +29,7 @@ function Contact() {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state })
+      body: encode({ "form-name": "contact", ...formData })
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
@@ -36,10 +37,7 @@ function Contact() {
     e.preventDefault();
   };
 
-  const handleNameChange = e => setName({ name: e.target.value });
-  const handleEmailChange = e => setEmailInput({ emailInput: e.target.value });
-  const handleSubjectChange = e => setSubject({ subject: e.target.value });
-  const handleMessageChange = e => setMessage({ message: e.target.value });
+  const handleChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
   return (
     <MainLayout>
@@ -48,21 +46,22 @@ function Contact() {
         <InnerLayout className={'contact-section'}>
           <div className="left-content">
             <form className="form" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" onSubmit={handleSubmit}>
+            <input type="hidden" name="contact" />
               <div className="form-field">
                 <label htmlFor="name">Enter Your Name <span>*</span></label>
-                <input id="name" name="name" type="text" required onChange={handleNameChange} />
+                <input id="name" name="name" type="text" required onChange={handleChange} />
               </div>
               <div className="form-field">
                 <label htmlFor="email">Enter Your Email <span>*</span></label>
-                <input id="email" name="email" type="text" required onChange={handleEmailChange} />
+                <input id="email" name="email" type="text" required onChange={handleChange} />
               </div>
               <div className="form-field">
                 <label htmlFor="subject">Subject <span>*</span></label>
-                <input id="subject" name="subject" type="text" required onChange={handleSubjectChange}/>
+                <input id="subject" name="subject" type="text" required onChange={handleChange}/>
               </div>
               <div className="form-field">
                 <label htmlFor="text-area">Enter Your Message</label>
-                <textarea id="textarea" name="message" type="textarea" cols="30" rows="12" required onChange={handleMessageChange} />
+                <textarea id="textarea" name="message" type="textarea" cols="30" rows="12" required onChange={handleChange} />
                 <div>
                   <div data-netlify-recaptcha="true"></div>
                 </div>

@@ -59,6 +59,7 @@ const ArrowStyled = styled.div`
     opacity: 0;
     color: var(--primary-color);
     background-color: var(--border-color);
+    border: 1px solid var(--secondary-color);
     border-radius: 50%;
     font-size: 2rem;
     transition: opacity ease-in-out 0.3s;

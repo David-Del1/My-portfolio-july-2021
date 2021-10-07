@@ -127,7 +127,7 @@ const GlobalStyle = createGlobalStyle`
   .light-theme{
     --primary-color: #007bff;
     --primary-color-light: #057FFF;
-    --secondary-color: #ff7675;
+    --secondary-color: #10121A;
     --background-dark-color: #F1F1F1;
     --background-dark-grey: #e4e4e4;
     --border-color: #cbced8;

@@ -37,7 +37,7 @@ const HeaderStyled = styled.header`
 .nav-link-container {
   display: flex;
   align-items: center;
-  height: 10vh;
+  height: 8vh;
   position: fixed;
   top: 0;
   width: 100vw;
@@ -59,7 +59,7 @@ const HeaderStyled = styled.header`
 .hidden {
   display: flex;
   align-items: center;
-  height: 10vh;
+  height: 8vh;
   position: fixed;
   top: 0;
   width: 100vw;
@@ -68,6 +68,7 @@ const HeaderStyled = styled.header`
   top: -500px;
   transition: top ease-in-out 0.5s;
   h1 {
+    padding: 1rem;
     font-size: 1.8rem;
     font-weight: 400;
   }

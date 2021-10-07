@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import {MainLayout, InnerLayout} from '../styles/Layout.js';
 import Title from '../Components/Title';
@@ -6,38 +6,43 @@ import ContactItem from '../Components/ContactItem.js';
 import PhoneIphoneOutlinedIcon from '@material-ui/icons/PhoneIphoneOutlined';
 import EmailIcon from '@material-ui/icons/Email';
 
-const initialState = {
-  name: '',
-  email: '',
-  subject: '',
-  message: '',
-}
+import { useForm, ValidationError } from '@formspree/react';
 
 function Contact() {
-  const [formData, setFormData] = useState(initialState);
+  const [state, handleSubmit] = useForm("mknkekkp");
 
   const phone = <PhoneIphoneOutlinedIcon />
   const email = <EmailIcon />
 
-  const encode = (data) => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
-  }
-
-  const handleSubmit = e => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...formData })
-    })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error));
-
-    e.preventDefault();
-  };
-
-  const handleChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
+  if (state.succeeded) {
+    return (
+      
+      <MainLayout>
+      <Title title={'Contact'} span={'Contact'}/>
+      <ContactStyled>
+        <InnerLayout className={'contact-section'}>
+        <h4
+        style={{
+          padding: '10px',
+          backgroundColor: 'var(--border-color)',
+          textAlign: 'center',
+          height: 'fit-content',
+          borderRadius: '5px'
+        }}
+      >I've received your message! Expect to hear back soon.</h4>
+          <div className="right-content">
+          
+            <ContactItem title={'Phone'} icon={phone} cont1={'+1(909)731-4075'} />
+            <a href="mailto:daviddel.731@gmail.com">
+              <ContactItem title={'Email'} icon={email} cont1={'DavidDel.731@gmail.com'} />
+            </a>
+          </div>
+          
+        </InnerLayout>
+      </ContactStyled>
+    </MainLayout>
+    ) 
+}
 
   return (
     <MainLayout>
@@ -49,19 +54,39 @@ function Contact() {
             <input type="hidden" name="contact" value="contact" />
               <div className="form-field">
                 <label htmlFor="name">Enter Your Name <span>*</span></label>
-                <input id="name" name="name" type="text" required onChange={handleChange} />
+                <input id="name" name="name" type="text" required />
+                <ValidationError 
+                  prefix="Email" 
+                  field="email"
+                  errors={state.errors}
+                />
               </div>
               <div className="form-field">
                 <label htmlFor="email">Enter Your Email <span>*</span></label>
-                <input id="email" name="email" type="text" required onChange={handleChange} />
+                <input id="email" name="email" type="text" required />
+                <ValidationError 
+                  prefix="Email" 
+                  field="email"
+                  errors={state.errors}
+                />
               </div>
               <div className="form-field">
                 <label htmlFor="subject">Subject <span>*</span></label>
-                <input id="subject" name="subject" type="text" required onChange={handleChange}/>
+                <input id="subject" name="subject" type="text" required/>
+                <ValidationError 
+                  prefix="Email" 
+                  field="email"
+                  errors={state.errors}
+                />
               </div>
               <div className="form-field">
                 <label htmlFor="text-area">Enter Your Message</label>
-                <textarea id="textarea" name="message" type="textarea" cols="30" rows="12" required onChange={handleChange}></textarea>
+                <textarea id="textarea" name="message" type="textarea" cols="30" rows="12" required></textarea>
+                <ValidationError 
+                  prefix="Email" 
+                  field="email"
+                  errors={state.errors}
+                />
                 <div>
                   <div data-netlify-recaptcha="true"></div>
                 </div>

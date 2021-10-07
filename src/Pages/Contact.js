@@ -53,7 +53,7 @@ function Contact() {
             <form className="form" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" onSubmit={handleSubmit}>
             <input type="hidden" name="contact" value="contact" />
               <div className="form-field">
-                <label htmlFor="name">Enter Your Name <span>*</span></label>
+                <label htmlFor="name">Your Name <span>*</span></label>
                 <input id="name" name="name" type="text" required />
                 <ValidationError 
                   prefix="Email" 
@@ -62,7 +62,7 @@ function Contact() {
                 />
               </div>
               <div className="form-field">
-                <label htmlFor="email">Enter Your Email <span>*</span></label>
+                <label htmlFor="email">Your Email <span>*</span></label>
                 <input id="email" name="email" type="text" required />
                 <ValidationError 
                   prefix="Email" 
@@ -80,7 +80,7 @@ function Contact() {
                 />
               </div>
               <div className="form-field">
-                <label htmlFor="text-area">Enter Your Message</label>
+                <label htmlFor="text-area">Enter Your Message <span>*</span></label>
                 <textarea id="textarea" name="message" type="textarea" cols="30" rows="12" required></textarea>
                 <ValidationError 
                   prefix="Email" 

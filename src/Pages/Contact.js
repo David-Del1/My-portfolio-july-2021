@@ -1,45 +1,71 @@
 import React from 'react';
 import styled from 'styled-components';
-import {MainLayout, InnerLayout} from '../styles/Layout';
+import {MainLayout, InnerLayout} from '../styles/Layout.js';
 import Title from '../Components/Title';
+import ContactItem from '../Components/ContactItem.js';
+import PhoneIphoneOutlinedIcon from '@material-ui/icons/PhoneIphoneOutlined';
 import EmailIcon from '@material-ui/icons/Email';
-import ContactItem from '../Components/ContactItem';
 
 function Contact() {
-    const email = <EmailIcon />
-    return (
-        <MainLayout>
-            <Title title={'Contact'} span={'Contact'} />
-            <ContactPageStyled >
-            <InnerLayout className={'contact-section'}>
-                <div className="left-content">
-                    <div className="contact-title">
-                        <h4>Get In Touch</h4>
-                    </div>
+  const phone = <PhoneIphoneOutlinedIcon />
+  const email = <EmailIcon />
+  return (
+    <MainLayout>
+      <Title title={'Contact'} span={'Contact'}/>
+      <ContactStyled>
+        <InnerLayout className={'contact-section'}>
+          <div className="left-content">
+            <form className="form" action="POST" data-netlify="true">
+              <div className="form-field">
+                <label htmlFor="name">Enter Your Name <span>*</span></label>
+                <input id="name" name="name" type="text" required />
+              </div>
+              <div className="form-field">
+                <label htmlFor="email">Enter Your Email <span>*</span></label>
+                <input id="email" name="email" type="text" required />
+              </div>
+              <div className="form-field">
+                <label htmlFor="subject">Subject <span>*</span></label>
+                <input id="subject" name="subject" type="text" required />
+              </div>
+              <div className="form-field">
+                <label htmlFor="text-area">Enter Your Message</label>
+                <textarea id="textarea" name="message" type="textarea" cols="30" rows="12" required />
+                <div>
+                  <div data-netlify-recaptcha="true"></div>
                 </div>
-                <div className="right-content">
-                    <a href="mailto:daviddel.731@gmail.com">
-                        <ContactItem title={'Email'} icon={email} cont1={'DavidDel.731@gmail.com'} />
-                    </a>
-                </div>
-            </InnerLayout>
-            </ContactPageStyled>
-        </MainLayout>
-    )
+              </div>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          <div className="right-content">
+          
+            <ContactItem title={'Phone'} icon={phone} cont1={'+1(909)731-4075'} />
+            <a href="mailto:daviddel.731@gmail.com">
+              <ContactItem title={'Email'} icon={email} cont1={'DavidDel.731@gmail.com'} />
+            </a>
+          </div>
+          
+        </InnerLayout>
+      </ContactStyled>
+    </MainLayout>
+    
+  );
 }
 
-const ContactPageStyled = styled.section`
+const ContactStyled = styled.section`
     .contact-section{
-
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
         @media screen and (max-width: 978px){
             grid-template-columns: repeat(1, 1fr);
             .f-button{
                 margin-bottom: 3rem;
             }
         }
-        .right-content{
+        .right-content, .right-content a{
             display: grid;
-            grid-gap: 1rem;
             grid-template-columns: repeat(1, 1fr);
             @media screen and (max-width: 502px){
                 width: 70%;
@@ -73,22 +99,37 @@ const ContactPageStyled = styled.section`
                 input{
                     border: 1px solid var(--border-color);
                     outline: none;
-                    background: transparent;
+                    background-color: var(--background-dark-color);
                     height: 50px;
                     padding:0 15px;
                     width: 100%;
                     color: inherit;
                 }
                 textarea{
-                    background-color: transparent;
+                  font-size: 1rem;
+                    background-color: var(--background-dark-color);
                     border: 1px solid var(--border-color);
                     outline: none;
                     color: inherit;
                     width: 100%;
                     padding: .8rem 1rem;
                 }
-            }
-            
+                span {
+                  color: var(--primary-color);
+                }
+              }
+              
+              button {
+                margin: 1rem 0;
+                padding: 0.6rem;
+                width: 100%;
+                background-color: var(--primary-color);
+                border: none;
+                border-radius: 5px;
+                color: white;
+                outline: none;
+                cursor: pointer;
+              }
         }
     }
 `;

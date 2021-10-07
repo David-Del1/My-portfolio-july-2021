@@ -15,7 +15,7 @@ function Contact() {
       <ContactStyled>
         <InnerLayout className={'contact-section'}>
           <div className="left-content">
-            <form className="form" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+            <form className="form" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
               <div className="form-field">
                 <label htmlFor="name">Enter Your Name <span>*</span></label>
                 <input id="name" name="name" type="text" required />

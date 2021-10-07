@@ -22,10 +22,13 @@
   <body>
 
     <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden action='/'>
-      <input name="name" />
-      <input id="email" name="email" />
-      <input id="subject" name="subject" />
-      <textarea id="textarea" name="message"></textarea>
+      <label htmlFor="name">Enter Your Name <span>*</span></label>
+                <input id="name" name="name" type="text" required />
+                <label htmlFor="email">Enter Your Email <span>*</span></label>
+                <input id="email" name="email" type="text" required />
+                <label htmlFor="subject">Subject <span>*</span></label>
+                <input id="subject" name="subject" type="text" required/>
+                <textarea id="textarea" name="message" type="textarea" cols="30" rows="12" required ></textarea>
     </form>
 
     <noscript>You need to enable JavaScript to run this app.</noscript>

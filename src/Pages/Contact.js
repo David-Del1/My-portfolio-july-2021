@@ -46,7 +46,7 @@ function Contact() {
         <InnerLayout className={'contact-section'}>
           <div className="left-content">
             <form className="form" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" onSubmit={handleSubmit}>
-            <input type="hidden" name="contact" />
+            <input type="hidden" name="contact" value="contact" />
               <div className="form-field">
                 <label htmlFor="name">Enter Your Name <span>*</span></label>
                 <input id="name" name="name" type="text" required onChange={handleChange} />

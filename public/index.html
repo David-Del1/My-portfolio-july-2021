@@ -20,6 +20,13 @@
     <title>David's Portfolio Site</title>
   </head>
   <body>
+
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden action='/'>
+      <input id="name" name="name" type="text" required onChange={handleChange} />
+      <input id="email" name="email" type="text" required onChange={handleChange} />
+      <input id="subject" name="subject" type="text" required onChange={handleChange}/>
+      <textarea id="textarea" name="message" type="textarea" cols="30" rows="12" required onChange={handleChange} />
+    </form >
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     

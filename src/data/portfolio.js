@@ -1,5 +1,6 @@
 import mmreVid from '../images/mmre.MP4';
 import chordialVid from '../images/chordial.MP4'
+import cashTrackVid from '../images/cashTrack.MP4';
 
 const portfolio = [
   
@@ -13,7 +14,16 @@ const portfolio = [
       text: 'Social media app that allows users to create a secure acct. and create/interact with posts known as Memories.'
     },
     {
-    id: 2,
+      id: 2,
+      image: cashTrackVid,
+      link1: 'https://github.com/David-Del1/budget-tracker',
+      link2: 'https://cashtrack.netlify.app/',
+      title: 'Cash Track',
+      techStack: "ReactJS, React Context, Material-UI, ChartJS, Speechly, Local Storage",
+      text: 'Budget tracker that displays income and expense data, current balance, and utilizes the Speechly web services to allow inputs through speech. Data persists using local'
+    },
+    {
+    id: 3,
     image: chordialVid,
     link1: 'https://github.com/Chordial-Music',
     link2: 'https://chordial.netlify.app/',

@@ -41,7 +41,8 @@ const HeaderStyled = styled.header`
   position: fixed;
   top: 0;
   width: 100vw;
-  background-color: #035bb3f8;
+  background-color: var(--primary-color);
+  opacity: 0.95;
   color: white;
   z-index: 1001;
   transition: top ease-in-out 0.5s;
@@ -64,7 +65,7 @@ const HeaderStyled = styled.header`
   position: fixed;
   top: 0;
   width: 100vw;
-  background-color: #035bb3f8;
+  background-color: var(--primary-color);
   color: white;
   z-index: 1001;
   top: -500px;

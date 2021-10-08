@@ -20,7 +20,7 @@ const portfolio = [
       link2: 'https://cashtrack.netlify.app/',
       title: 'Cash Track',
       techStack: "ReactJS, React Context, Material-UI, ChartJS, Speechly, Local Storage",
-      text: 'Budget tracker that displays income and expense data, current balance, and utilizes the Speechly web services to allow inputs through speech. Data persists using local'
+      text: 'Budget tracker that displays income and expense data, current balance, and utilizes Speechly web services to allow inputs through speech. Data persists using local'
     },
     {
     id: 3,

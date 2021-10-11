@@ -13,12 +13,12 @@ function ServicesSection() {
       <ServicesStyled>
         <Title title = {"Highlights"} span={"Highlights"} />
         <div className="services">
-          <ServiceCard image={design} title={"TDD"} 
-            paragraph={"Practiced in testing libraries such as QUnit and Jest to ensure product features are rigorously tested following industry-standard coding practices."}/>
+          <ServiceCard image={design} title={"Test Driven Development"} 
+            paragraph={"Utilizes testing libraries such as QUnit and Jest to ensure product features are rigorously tested following industry-standard coding practices."}/>
           <ServiceCard image={goals} title={"MVC Architecture"} 
-            paragraph={"Capable of employing MVC architecture principles to create a modular and scalable code base with reusable components."}/>
-          <ServiceCard image={undraw2} title={"Visualization Tools"} 
-            paragraph={"Good software starts with good planning. Proficient with design software such as Adobe XD/Illustrator to create wireframes and produce tangible blueprints."}/>
+            paragraph={"Learned in MVC architecture principles to create a modular and scalable code base with reusable components."}/>
+          <ServiceCard image={undraw2} title={"Agile/Scrum Methodologies"} 
+            paragraph={"Can employ Agile development methodology in order to promote frequent code inspection and accountability among other benefits"}/>
         </div>
       </ServicesStyled>
     </InnerLayout>

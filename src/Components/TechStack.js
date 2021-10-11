@@ -12,7 +12,6 @@ function Skills() {
               <h2>Languages</h2>
               <ul>
                 <li>JavaScript</li>
-                <li>Python</li>
                 <li>HTML/CSS</li>
                 <li>SASS</li>
               </ul>
@@ -22,7 +21,6 @@ function Skills() {
               <ul>
                 <li>React</li>
                 <li>Redux</li>
-                <li>Angular</li>
                 <li>Node</li>
                 <li>Express</li>
               </ul>

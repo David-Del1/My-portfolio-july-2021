@@ -11,15 +11,10 @@ function Menu({menuItem}) {
                 return <div className="grid-item" key={item.id}>
                     <div className="portfolio-content">
                         <div className="portfolio-image">
-                            <video
-                            // src={item.image} 
-                            // alt=""
-                            // controls
-                            autoPlay
-                            loop={true}
-                            >
-                              <source src={item.image} />
-                            </video>
+                            <img 
+                              src={item.image}
+                              alt={item.title}
+                            />
                             <ul>
                                 <li>
                                     <a href={item.link1} target="_blank" rel="noreferrer">
@@ -90,7 +85,7 @@ const MenuItemStyled = styled.div`
                 transition: all .4s ease-in-out;
                 position: absolute;
                 left: 50%;
-                top: 40%;
+                top: 35%;
                 opacity: 0;
                 li{
                         background-color: var(--border-color);

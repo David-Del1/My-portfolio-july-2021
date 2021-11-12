@@ -19,7 +19,7 @@ const portfolio = [
       image: crPic,
       link1: 'https://github.com/David-Del1/critical_rationalist_blog',
       link2: 'https://critical-rationalist-blog.vercel.app',
-      title: 'The Critical Rationalism',
+      title: 'The Critical Rationalist',
       techStack: 'NextJS, TailwindCSS, GraphCMS',
       text: "A personal blog where I write about my interests."
     },

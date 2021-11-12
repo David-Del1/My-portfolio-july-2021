@@ -20,8 +20,8 @@ const portfolio = [
       link1: 'https://github.com/David-Del1/critical_rationalist_blog',
       link2: 'https://critical-rationalist-blog.vercel.app',
       title: 'The Critical Rationalism',
-      techStack: 'NextJS, TailwindCSS, ',
-      text: " Allows users to create beautiful harmonic sequences from curated collections of musical chords."
+      techStack: 'NextJS, TailwindCSS, GraphCMS',
+      text: "A personal blog where I write about my interests."
     },
     {
       id: 2,
@@ -41,6 +41,7 @@ const portfolio = [
     techStack: 'ReactJS, Redux, NodeJS, Express',
     text: "Allows users to create beautiful harmonic sequences from curated collections of musical chords."
     },
+
   
 ];
 
